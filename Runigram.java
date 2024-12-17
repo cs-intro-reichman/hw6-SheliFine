@@ -175,7 +175,7 @@ public class Runigram {
 	public static Color[][] blend(Color[][] image1, Color[][] image2, double alpha) {
 		Color[][] blendedImage = new Color[image1.length][image1[0].length];
 		for (int i = 0; i < blendedImage.length; i++) {
-			for (int j = 0; j < blendedImage.length; j++) {
+			for (int j = 0; j < blendedImage[0].length; j++) {
 				blendedImage[i][j] = blend(image1[i][j], image2[i][j], alpha);
 			}
 		}
