@@ -15,13 +15,14 @@ public class Runigram {
 		// image processing operations:
 		Color[][] image;
 
-		// Tests the horizontal flipping of an image:
-		image = flippedHorizontally(tinypic);
-		System.out.println();
-		print(image);
+		// // Tests the horizontal flipping of an image:
+		// image = flippedHorizontally(tinypic);
+		// System.out.println();
+		// print(image);
 		
 		//// Write here whatever code you need in order to test your work.
-		//// You can continue using the image array.
+		// //// You can continue using the image array.
+		// print(scaled(image, 3, 5));
 	}
 
 	/** Returns a 2D array of Color values, representing the image data
