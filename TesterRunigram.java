@@ -171,6 +171,7 @@ public class TesterRunigram {
     public static boolean testScaled() {
         Color[][] flipped = Runigram.scaled(safeRead("ironman.ppm"), 100, 150);
         Color[][] res = safeRead("expected_results/ironman_100_150.ppm");
+
         
         if (flipped == null || res == null) {
             return false;

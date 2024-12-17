@@ -1,8 +1,8 @@
 import java.awt.Color;
 
 /** A library of image processing functions. */
-public class Runigram {
-
+public class Runigram {   
+ 
 	public static void main(String[] args) {
 	    
 		//// Hide / change / add to the testing code below, as needed.
@@ -11,18 +11,20 @@ public class Runigram {
 		Color[][] tinypic = read("tinypic.ppm");
 		print(tinypic);
 
+		System.out.println();
+		System.out.println();
 		// Creates an image which will be the result of various 
 		// image processing operations:
 		Color[][] image;
 
 		// Tests the horizontal flipping of an image:
-		image = flippedHorizontally(tinypic);
-		System.out.println();
-		print(image);
+		// image = flippedHorizontally(tinypic);
+		// System.out.println();
+		// print(image);
 		
 		//// Write here whatever code you need in order to test your work.
 		// //// You can continue using the image array.
-		// print(scaled(image, 3, 5));
+		print(scaled(tinypic, 3, 5));
 	}
 
 	/** Returns a 2D array of Color values, representing the image data
@@ -61,9 +63,9 @@ public class Runigram {
 	}
 
 	// Prints the pixels of the given image.
+	// For example, to check that some image processing function works correctly,
 	// Each pixel is printed as a triplet of (r,g,b) values.
 	// This function is used for debugging purposes.
-	// For example, to check that some image processing function works correctly,
 	// we can apply the function and then use this function to print the resulting image.
 	private static void print(Color[][] image) {
 		//// Replace this comment with your code
@@ -136,13 +138,13 @@ public class Runigram {
 	 * The image is scaled (resized) to have the given width and height.
 	 */
 	public static Color[][] scaled(Color[][] image, int width, int height) {
-		int width0 = image.length;
-		int height0 = image[0].length;
-		Color[][] scaledImage = new Color[width][height];
+		double width0 = image[0].length;
+		double height0 = image.length;
+		Color[][] scaledImage = new Color[height][width];
 
 		for (int i = 0; i < scaledImage.length; i++) {
 			for (int j = 0; j < scaledImage[0].length; j++) {
-				scaledImage[i][j] = image[i * (width0 / width)][j * height / height0];
+				scaledImage[i][j] = image[(int) (i * (height0 / height))][(int) (j * (width0 / width))];
 		}
 	}
 
