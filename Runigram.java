@@ -15,10 +15,10 @@ public class Runigram {
 		// image processing operations:
 		Color[][] image;
 
-		// // Tests the horizontal flipping of an image:
-		// image = flippedHorizontally(tinypic);
-		// System.out.println();
-		// print(image);
+		// Tests the horizontal flipping of an image:
+		image = flippedHorizontally(tinypic);
+		System.out.println();
+		print(image);
 		
 		//// Write here whatever code you need in order to test your work.
 		// //// You can continue using the image array.
@@ -143,7 +143,6 @@ public class Runigram {
 		for (int i = 0; i < scaledImage.length; i++) {
 			for (int j = 0; j < scaledImage[0].length; j++) {
 				scaledImage[i][j] = image[i * (width0 / width)][j * height / height0];
-			
 		}
 	}
 
