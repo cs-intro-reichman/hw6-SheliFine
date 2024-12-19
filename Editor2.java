@@ -11,6 +11,9 @@ public class Editor2 {
 
 	public static void main (String[] args){
 		//// Replace this comment with your code.
-		//// This function is similar to the main function of Editor1.java			
+		Color[][] image = Runigram.read(args[0]);
+		int width = Integer.parseInt(args[1]);
+		int height = Integer.parseInt(args[2]);
+		Runigram.display(Runigram.scaled(image, width, height));			
 	}
 }
